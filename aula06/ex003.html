@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>titulo do site</title>
+  <style>
+    body {
+      background-color: rgb(175, 89, 255);
+      color:blanchedalmond;
+      font: Arial;
+    }
+    h1{
+      color: rgb(0, 185, 49);
+    }
+  </style>
+</head>
+<body>
+    <h1>Título do site</h1>
+    <p>Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.
+      Paragrafo do site, sim um paragrado para esse lindo site.</p>
+    <script>
+      window.alert('Vamos somar dois números')
+      var primeiroNumero = window.prompt('Digite um número')// string
+      var segundoNumero = window.prompt('Digite mais um número')// string
+      var somaDosNumeros = Number.parseInt(primeiroNumero) + Number.parseInt(segundoNumero)
+      window.alert('As variáveis estavam dentro de um prompt que recebem valores como strings, para converter: Number.parse.Int(ou Float). E assim podemos ver a soma:' + somaDosNumeros)
+      window.alert(`isso é uma template string que recebe um placeholder >> ${somaDosNumeros}`)
+      window.alert('Lembrando que só Number já basta para converter os valores')
+      window.alert('Convertendo a variável para string: ' + String(somaDosNumeros))
+    </script>
+</body>
+</html>
