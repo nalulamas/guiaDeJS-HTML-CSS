@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Título do site</title>
+  <style>
+    div#area{
+      font: normal 20pt Arial;
+      background-color: pink;
+      color: black;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="area" >
+    <!-- <div id="area" onclick="clicarNaDiv()" onmouseenter="entrarDiv()" onmouseout="sairDiv()" ></div> -->
+    Testando ID
+  </div>
+  
+  <!-- Quando clicar na div é criado um objeto chamado areaObjeto, que vai ser uma ligaçao
+  do objeto areaObjeto dentro do JS com o elemento area (id="area") que esta dentro do HTML
+  E este objeto vai mudar o conteúdo dele para "Clicado"
+  -->
+
+  <script>
+    // quem ativa a funçao é o EventListener, por isso fica fora da func
+    const clickObjeto = window.document.getElementById('area') // isto é um objeto
+    clickObjeto.addEventListener('click', clicarNaDiv)   
+    const entrarObjeto = window.document.getElementById('area')
+    entrarObjeto.addEventListener('mouseenter', entrarDiv)
+    const sairObjeto = window.document.getElementById('area')
+    sairObjeto.addEventListener('mouseout', sairDiv)
+
+    function clicarNaDiv() {
+      clickObjeto.innerText = "Clicou na Div"
+      clickObjeto.style.background = "red"
+    }
+   
+    function entrarDiv() {
+      entrarObjeto.innerText = "Entrou na Div"
+      entrarObjeto.style.background = "pink"
+
+    }
+    function sairDiv() {
+      sairObjeto.innerText = 'Saiu da div'
+      sairObjeto.style.background = "green"
+    }
+  </script>
+</body>
+</html>
