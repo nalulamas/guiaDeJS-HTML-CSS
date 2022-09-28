@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Países</title>
+</head>
+<body>
+  <h1>Senso do IBGE</h1>
+  <section>
+    <input placeholder="Digite seu país aqui" id="txtp1" type="text"/>
+    <button onClick="verificar()"> Enviar </button>
+  <div id="verificar">País selecionado: </div>
+  </section>
+  <script>
+    function verificar() {
+      let paises = window.document.getElementById('txtp1')
+      let verificar = window.document.querySelector('div#verificar')
+      let pais = String(paises.value)
+      verificar.innerHTML += `<p>${pais}</p>`
+
+      if(pais == 'Brasil'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Brasileiro!</p>`
+      } else if (pais == 'Estados Unidos'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Estadunidense!</p>`
+      } else if (pais == 'Canada'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Canadense!</p>`
+      } else if (pais == 'China'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Chines!</p>`
+      }else if (pais == 'Japao'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Japones!</p>`
+      }else if (pais == 'Italia'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Italiano!</p>`
+      }else if (pais == 'França'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Frances!</p>`
+      }else if (pais == 'Portugal'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Portugues!</p>`
+      }else if (pais == 'Chile'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é Chileno!</p>`
+      }else if (pais == 'Argentina'.toLowerCase()) {
+        verificar.innerHTML += `<p> Voce é argentino!</p>`
+      } else{
+        verificar.innerHTML = 'País nao encontrado'
+      }
+    }
+  </script>
+</body>
+</html>

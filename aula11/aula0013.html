@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detran</title>
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    Velocidade do carro: <input type='number' id='txtvel'/>
+    <button onclick="calcular()">Verificar</button>
+    <div id="res">
+
+    </div>
+    <script>
+      function calcular() {
+        let txtv = window.document.getElementById('txtvel') // pega o valor que foi escrito no input
+        let res = window.document.querySelector('div#res') 
+        let vel = Number(txtv.value) // pega o valor do input e obriga ele ser do tipo number
+        res.innerHTML = `<p>Sua velocidade atual é de ${vel}km/h</p>`
+        if ( vel > 60) {
+          res.innerHTML += `<p> Voce está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+        }
+        res.innerHTML += `<p>Dirija sempre com cinto des segurança</p>` // tem que ser += senao ele apaga a info anterior
+      }
+    </script>
+</body>
+</html>
